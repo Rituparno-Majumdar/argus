@@ -6,6 +6,16 @@ versions `MAJOR.MINOR.PATCH`: PATCH for wording/accuracy fixes, MINOR for a
 new or materially changed pattern, MAJOR for a structural rework of the guide
 itself.
 
+## [1.1.0] - 2026-10-18
+
+### Added
+- `docs/architecture.md` §12 — a new subsection, "Keeping this guide itself
+  current," describing the versioned, draft-only sync hook that watches the
+  weekly self-improvement cycle (and manual architectural work outside it)
+  and drafts scoped doc updates plus a changelog version bump on a local
+  branch, gated behind a single operator approval card before anything is
+  published.
+
 ## [1.0.0] - 2026-10-18
 
 Initial public release.

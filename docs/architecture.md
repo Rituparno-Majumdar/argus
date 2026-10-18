@@ -129,6 +129,10 @@ sequenceDiagram
 
 The reason this scope restriction matters: git-versioned infrastructure changes are revertible. A bad change can be rolled back from history. This is precisely why full autonomy is defensible *here* and not automatically extended to domains where an action, once taken, can't be undone the same way (§13, §14).
 
+### Keeping this guide itself current
+
+This guide is, itself, a downstream consumer of the architecture it documents: a small, versioned sync hook watches for real architectural change and drafts the corresponding doc update automatically, rather than letting the guide drift stale against the system it describes. It has two triggers — the weekly cycle above calls it automatically after any cycle that actually approved and implemented a change, and a manual, on-demand invocation covers architectural work done outside that cycle. Either path produces the same small, scoped artifact: an edit to the relevant doc section (never a full regeneration), a version bump recorded in the changelog, and a local git commit on its own branch — never a direct push. Exactly one approval card (§4) then asks the operator to publish or discard the draft; nothing reaches the public guide without that explicit decision, and a change the hook judges large enough to need a major version bump is flagged for the operator rather than applied automatically, since that call is deliberately kept out of the automation's hands.
+
 ## 13. Persistent goal-carrying and life-admin autonomy
 
 The single capability most associated with "always-on agent" products: a stated goal keeps advancing across hours or days without the operator re-prompting at each step.
