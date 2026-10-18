@@ -1,5 +1,7 @@
 # Argus
 
+![Argus — a field of independent watchers, never all closed at once](docs/assets/argus-cover.png)
+
 **A reference architecture for a self-hosted, always-on autonomous agent fleet — the pattern behind a system that out-covers Meta's Muse, xAI's Grok Bot, and OpenAI's Dots at a fraction of the price, by owning the infrastructure instead of renting access to someone else's.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
