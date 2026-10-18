@@ -24,6 +24,10 @@ The fleet this pattern comes from runs, concurrently and unattended:
 
 None of this is hypothetical. All of it is described in [`docs/architecture.md`](docs/architecture.md) as a pattern, with every identifying detail — names, hosts, IDs, IPs — replaced by a placeholder.
 
+## Why "Argus"?
+
+In Greek myth, Argus Panoptes was the hundred-eyed giant set to watch over Io — his eyes never all closed at once, so nothing could slip past him unseen. That's a literal description of this architecture's defining property: no single clever agent is doing the watching. Dozens of narrow, boring, independent loops run concurrently — intrusion defense, dispatch-health checks, disk-pressure thresholds, credit-anomaly detection, an external dead-man's-switch heartbeat, a meta-watchdog that restarts anything that silently stalls, and a weekly pass that audits the system's own security posture and efficiency. None of them is individually impressive. Together, they're why "fully autonomous for the right scope" is survivable here rather than reckless — there is always an eye open, even when the operator is asleep and the primary agent is mid-task. The name also continues this architecture's own convention of naming each component after a figure whose myth matches its job, rather than a generic product label.
+
 ## Start here
 
 **You do not read this repo top to bottom and start copying files.** There are no files to copy — this is documentation-only, by design. Instead:
